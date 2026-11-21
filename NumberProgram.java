@@ -1,9 +1,11 @@
 public class NumberProgram {
     public static int findResult(int[] values) {
-        int sum = 0;
-        for (int v : values) {
-            sum += v;
+        int max = values[0];
+        for (int i = 1; i < values.length; i++) {
+            if (values[i] > max) {
+                max = values[i];
+            }
         }
-        return sum;
+        return max;
     }
 }
